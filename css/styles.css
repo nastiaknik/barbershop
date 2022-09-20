@@ -32,15 +32,29 @@ body {
   width: 1200px;
   padding: 0 15px;
   margin: 0 auto;
-  outline: 2px solid firebrick;
 }
 .suptitle {
+  display: flex;
+  align-items: center;
+  gap: 20px;
   margin-bottom: 20px;
   font-weight: 600;
   font-size: 11px;
   line-height: calc(15 / 11);
   letter-spacing: 0.1em;
   text-transform: uppercase;
+}
+.suptitle-theme-dark {
+  color: var(--grey-text-color-60);
+}
+.suptitle::before {
+  content: "";
+  width: 60px;
+  height: 1px;
+  background-color: var(--main-text-color);
+}
+.suptitle-theme-dark::before {
+  background-color: var(--grey-text-color-60);
 }
 .caption {
   font-family: var(--secondary-font);
@@ -74,7 +88,14 @@ body {
   display: flex;
   align-items: center;
 }
-
+.card-set {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--indent);
+}
+.card {
+  flex-basis: calc((100% - var(--indent) * (var(--items) - 1)) / var(--items));
+}
 /* reset */
 .link {
   text-decoration: none;
@@ -158,6 +179,13 @@ p {
   align-items: center;
   gap: 40px;
 }
+.social-list::before {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 1px;
+  background-color: var(--main-text-color);
+}
 .social-link {
   display: block;
   font-weight: 600;
@@ -237,8 +265,18 @@ p {
 
 /* prices */
 .prices {
+  max-width: 1600px;
+  margin: 0 auto;
   padding: 130px 0;
   background-color: var(--dark-bg-color);
+  background-image: url(../images/prices.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  max-width: 1800px;
+}
+.prices .suptitle {
+  color: var(--grey-text-color-60);
 }
 .prices .caption {
   color: var(--light-text-color);
@@ -249,20 +287,45 @@ p {
   justify-content: space-between;
   margin-bottom: 50px;
 }
+.price-list:first-child {
+  background-image: linear-gradient(
+    180deg,
+    #171a24 0%,
+    rgba(23, 26, 36, 0.2) 100%
+  );
+}
+.price-list:last-child {
+  background-image: linear-gradient(
+    180deg,
+    #090b13 0%,
+    rgba(9, 11, 19, 0.2) 100%
+  );
+}
 .price-list {
   flex-basis: 570px;
   padding: 30px 20px;
-  background: linear-gradient(180deg, #171a24 0%, rgba(23, 26, 36, 0.2) 100%);
-  background: linear-gradient(180deg, #090b13 0%, rgba(9, 11, 19, 0.2) 100%);
 }
 .price-item {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
   margin-bottom: 20px;
   line-height: calc(30 / 18);
   letter-spacing: 0.02em;
   color: var(--grey-text-color);
 }
+.price-item::before {
+  background: rgba(157, 164, 189, 0.12);
+  height: 1px;
+  content: "";
+  display: block;
+  flex-grow: 1;
+}
 .price-item:last-child {
   margin-bottom: 0;
+}
+.price-item-serv {
+  order: -1;
 }
 .prices .btn {
   display: block;
@@ -343,8 +406,9 @@ p {
   letter-spacing: 0.02em;
   color: var(--accent-color);
 }
-.team .social-list {
+.team .social-icons-list {
   display: flex;
+  justify-content: center;
   gap: 10px;
 }
 
@@ -362,7 +426,12 @@ p {
 
 /* form */
 .background-group {
+  max-width: 1600px;
+  margin: 0 auto;
   background-color: var(--dark-bg-color);
+  background-image: url(../images/contacts-bg-img.png);
+  background-position: left calc(50% + 410px) top;
+  background-repeat: no-repeat;
 }
 .group-container {
   padding-top: 130px;
@@ -384,6 +453,7 @@ p {
 
 /* contacts */
 .contacts {
+  padding-left: 100px;
 }
 .contacts .caption {
   color: var(--light-text-color);
@@ -413,7 +483,6 @@ p {
 /* footer */
 .footer {
   padding: 56px 0;
-  display: flex;
 }
 .copyright {
   margin-right: auto;
@@ -427,4 +496,9 @@ p {
   display: flex;
   gap: 40px;
   margin-left: auto;
+  align-items: center;
+}
+.footer-container {
+  display: flex;
+  align-items: center;
 }
