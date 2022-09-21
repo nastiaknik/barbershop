@@ -38,6 +38,14 @@
       href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Raleway:wght@700&display=swap"
       rel="stylesheet"
     />
+  <!-- Modern-normalize -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
+      integrity="sha512-wpPYUAdjBVSE4KJnH1VR1HeZfpl1ub8YT/NKx4PuQ5NmX2tKuGu6U/JRp5y+Y8XG2tV+wKQpNHVUX03MfMFn9Q=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <!-- styles -->
     <link href="./css/styles.css" rel="stylesheet" />
     <title>BarberShop</title>
@@ -46,12 +54,17 @@
     <header class="header">
       <div class="container flex-cont">
         <a class="logo" href="./index.html"
-          ><img
+          >
+          <svg class="logo-icon" width="68" height="56">
+            <use href="./images/sprite.svg#logo"></use>
+          </svg>
+          <!-- <img
             src="./images/logo.svg"
             alt="BarberShop logo"
             width="68"
             height="56"
-        /></a>
+        /> -->
+      </a>
         <nav class="nav">
           <ul class="menu list">
             <li><a class="header-link link" href="#about">About</a></li>
@@ -73,10 +86,10 @@
     <main>
       <section class="hero">
         <div class="container hero-container">
-          <ul class="social-list list">
+          <ul class="media-list list">
             <li>
               <a
-                class="social-link link"
+                class="media-link link"
                 href="#"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -85,7 +98,7 @@
             </li>
             <li>
               <a
-                class="social-link link"
+                class="media-link link"
                 href="#"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -230,46 +243,65 @@
                 width="370"
                 height="346"
               />
-              <h3 class="team-name">John Smith</h3>
+              <div class="team-wrapp"><h3 class="team-name">John Smith</h3>
               <p class="team-position">Extreme Barber</p>
               <ul class="social-icons-list list">
-                <li>
+                <li class="social-item">
                   <a
-                    class="link"
+                    class="social-link link"
                     href=""
                     target="_blank"
                     rel="noopener noreferrer"
-                    >Instagram</a
+                    aria-label="Instagram"
+                    >
+                    <svg class="social-icon" width="20" height="20"
+                    >
+                    <use href="./images/sprite.svg#instagram"></use>
+                    </svg>
+                    </a
                   >
                 </li>
-                <li>
+                <li class="social-item">
                   <a
-                    class="link"
+                    class="social-link link"
                     href=""
                     target="_blank"
                     rel="noopener noreferrer"
-                    >Twitter</a
+                    aria-label="Twitter"
+                    >                    
+                    <svg class="social-icon" width="20" height="20"
+                    >
+                      <use href="./images/sprite.svg#twitter"></use>
+                    </svg></a
                   >
                 </li>
-                <li>
+                <li class="social-item">
                   <a
-                    class="link"
+                    class="social-link link"
                     href=""
                     target="_blank"
                     rel="noopener noreferrer"
-                    >Facebook
-                  </a>
+                    aria-label="Facebook">            
+                    <svg class="social-icon" width="20" height="20"
+                    >
+                      <use href="./images/sprite.svg#facebook"></use>
+                    </svg></a>
                 </li>
-                <li>
+                <li class="social-item">
                   <a
-                    class="link"
+                    class="social-link link"
                     href=""
                     target="_blank"
                     rel="noopener noreferrer"
-                    >Linkedin</a
+                    aria-label="Linkedin"
+                    >                    
+                    <svg class="social-icon" width="20" height="20"
+                    >
+                      <use href="./images/sprite.svg#linkedin"></use>
+                    </svg></a
                   >
                 </li>
-              </ul>
+              </ul></div>
             </li>
             <li>
               <img
@@ -278,46 +310,62 @@
                 width="370"
                 height="346"
               />
-              <h3 class="team-name">Michele Doe</h3>
+              <div class="team-wrapp"><h3 class="team-name">Michele Doe</h3>
               <p class="team-position">Extreme Barber</p>
               <ul class="social-icons-list list">
-                <li>
+                <li class="social-item">
                   <a
-                    class="link"
+                    class="social-link link"
                     href=""
                     target="_blank"
                     rel="noopener noreferrer"
-                    >Instagram</a
+                    aria-label="Instagram">                    
+                    <svg class="social-icon" width="20" height="20"
+                    >
+                      <use href="./images/sprite.svg#instagram"></use>
+                    </svg></a
                   >
                 </li>
-                <li>
+                <li class="social-item">
                   <a
-                    class="link"
+                    class="social-link link"
                     href=""
                     target="_blank"
                     rel="noopener noreferrer"
-                    >Twitter</a
+                    aria-label="Twitter">                    
+                    <svg class="social-icon" width="20" height="20"
+                    >
+                      <use href="./images/sprite.svg#twitter"></use>
+                    </svg></a
                   >
                 </li>
-                <li>
+                <li class="social-item">
                   <a
-                    class="link"
+                    class="social-link link"
                     href=""
                     target="_blank"
                     rel="noopener noreferrer"
-                    >Facebook
+                    aria-label="Facebook">                    
+                    <svg class="social-icon" width="20" height="20"
+                    >
+                      <use href="./images/sprite.svg#facebook"></use>
+                    </svg>
                   </a>
                 </li>
-                <li>
+                <li class="social-item">
                   <a
-                    class="link"
+                    class="social-link link"
                     href=""
                     target="_blank"
                     rel="noopener noreferrer"
-                    >Linkedin</a
+                    aria-label="Linkedin">                    
+                    <svg class="social-icon" width="20" height="20"
+                    >
+                      <use href="./images/sprite.svg#linkedin"></use>
+                    </svg></a
                   >
                 </li>
-              </ul>
+              </ul></div>
             </li>
             <li>
               <img
@@ -326,46 +374,62 @@
                 width="370"
                 height="346"
               />
-              <h3 class="team-name">Alan Black</h3>
+              <div class="team-wrapp"><h3 class="team-name">Alan Black</h3>
               <p class="team-position">Extreme Barber</p>
               <ul class="social-icons-list list">
-                <li>
+                <li class="social-item">
                   <a
-                    class="link"
+                    class="social-link link"
                     href=""
                     target="_blank"
                     rel="noopener noreferrer"
-                    >Instagram</a
+                    aria-label="Instagram">                    
+                    <svg class="social-icon" width="20" height="20"
+                    >
+                      <use href="./images/sprite.svg#instagram"></use>
+                    </svg></a
                   >
                 </li>
-                <li>
+                <li class="social-item">
                   <a
-                    class="link"
+                    class="social-link link"
                     href=""
                     target="_blank"
                     rel="noopener noreferrer"
-                    >Twitter</a
+                    aria-label="Twitter">                    
+                    <svg class="social-icon" width="20" height="20"
+                    >
+                      <use href="./images/sprite.svg#twitter"></use>
+                    </svg></a
                   >
                 </li>
-                <li>
+                <li class="social-item">
                   <a
-                    class="link"
+                    class="social-link link"
                     href=""
                     target="_blank"
                     rel="noopener noreferrer"
-                    >Facebook
+                    aria-label="Facebook">                    
+                    <svg class="social-icon" width="20" height="20"
+                    >
+                      <use href="./images/sprite.svg#facebook"></use>
+                    </svg>
                   </a>
                 </li>
-                <li>
+                <li class="social-item">
                   <a
-                    class="link"
+                    class="social-link link"
                     href=""
                     target="_blank"
                     rel="noopener noreferrer"
-                    >Linkedin</a
+                    aria-label="Linkedin">                    
+                    <svg class="social-icon" width="20" height="20"
+                    >
+                      <use href="./images/sprite.svg#linkedin"></use>
+                    </svg></a
                   >
                 </li>
-              </ul>
+              </ul></div>
             </li>
           </ul>
         </div>
@@ -427,20 +491,32 @@
                     href="https://goo.gl/maps/7cWbh8s8vtYF5Xr56"
                     target="_blank"
                     rel="noopener noreferrer"
-                    >st. Vasylkivska, 7A <br />
+                    >
+                    <svg class="address-icon" width="24" height="24">
+                      <use href="./images/sprite.svg#map-pin"></use>
+                    </svg>
+                    st. Vasylkivska, 7A <br />
                     Kyiv, 08132
                   </a>
                 </li>
                 <li class="address-item">
                   <a class="link address-link" href="tel:+380441111111"
-                    >+38 044 111 11 11</a
+                    >
+                    <svg class="address-icon" width="24" height="24">
+                      <use href="./images/sprite.svg#phone"></use>
+                    </svg>
+                    +38 044 111 11 11</a
                   >
                 </li>
                 <li class="address-item">
                   <a
                     class="link address-link"
                     href="mailto:barbershop@email.com"
-                    >barbershop@email.com</a
+                    >
+                    <svg class="address-icon" width="24" height="24">
+                      <use href="./images/sprite.svg#mail"></use>
+                    </svg>
+                    barbershop@email.com</a
                   >
                 </li>
               </ul>
@@ -459,10 +535,10 @@
     <footer class="footer">
       <div class="container flex-cont footer-container">
         <p class="copyright">&copy; Copyright 2020</p>
-        <ul class="social-list list">
+        <ul class="media-list list">
           <li>
             <a
-              class="social-link link"
+              class="media-link link"
               href="#"
               target="_blank"
               rel="noopener noreferrer"
@@ -471,7 +547,7 @@
           </li>
           <li>
             <a
-              class="social-link link"
+              class="media-link link"
               href="#"
               target="_blank"
               rel="noopener noreferrer"

@@ -17,7 +17,7 @@
   --btn-radius: 25px;
   --indent: 30px;
   --items: 3;
-  /* #000000; #111319; */
+  /* #111319; */
 }
 
 /* basic syles */
@@ -131,6 +131,9 @@ p {
   padding-bottom: 32px;
   margin-right: 70px;
 }
+.logo-icon {
+  fill: var(--main-text-color);
+}
 .menu {
   display: flex;
   align-items: center;
@@ -173,28 +176,28 @@ p {
   padding-top: 184px;
   padding-bottom: 40px;
 }
-.hero .social-list {
+.hero .media-list {
   margin-bottom: 56px;
   display: flex;
   align-items: center;
   gap: 40px;
 }
-.social-list::before {
+.media-list::before {
   content: "";
   display: block;
   width: 60px;
   height: 1px;
   background-color: var(--main-text-color);
 }
-.social-link {
+.media-link {
   display: block;
   font-weight: 600;
   font-size: 11px;
   line-height: calc(15 / 11);
   letter-spacing: 0.2em;
 }
-.social-link:hover,
-.social-link:focus {
+.media-link:hover,
+.media-link:focus {
   color: var(--accent-color);
 }
 .hero .suptitle {
@@ -391,8 +394,12 @@ p {
   display: flex;
   gap: 30px;
 }
+.team-wrapp {
+  padding-top: 30px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
 .team-name {
-  margin-top: 30px;
   margin-bottom: 8px;
   line-height: calc(25 / 18);
   text-align: center;
@@ -406,10 +413,26 @@ p {
   letter-spacing: 0.02em;
   color: var(--accent-color);
 }
-.team .social-icons-list {
+.social-icons-list {
   display: flex;
   justify-content: center;
   gap: 10px;
+}
+.social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  background-color: var(--light-text-color);
+  border-radius: 50%;
+}
+.social-link:hover .social-icon,
+.social-link:focus .social-icon {
+  fill: var(--accent-color);
+}
+.social-icon {
+  fill: var(--main-text-color);
 }
 
 /* gallery */
@@ -430,7 +453,7 @@ p {
   margin: 0 auto;
   background-color: var(--dark-bg-color);
   background-image: url(../images/contacts-bg-img.png);
-  background-position: left calc(50% + 410px) top;
+  background-position: left calc(50% + 327px) top;
   background-repeat: no-repeat;
 }
 .group-container {
@@ -476,6 +499,19 @@ p {
 .address-item:not(:last-of-type) {
   margin-bottom: 20px;
 }
+.address-link {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.address-item:first-child .address-link {
+  align-items: flex-start;
+}
+
+.address-icon {
+  stroke: var(--grey-text-color);
+}
+
 .contacts .suptitle {
   color: var(--light-text-color);
 }
@@ -492,7 +528,7 @@ p {
   letter-spacing: 0.2em;
   color: var(--grey-text-color);
 }
-.footer .social-list {
+.footer .media-list {
   display: flex;
   gap: 40px;
   margin-left: auto;
