@@ -25,7 +25,7 @@ body {
   font-family: var(--main-font);
   color: var(--main-text-color);
   font-size: 18px;
-  line-height: calc();
+  line-height: calc(15 / 11);
   letter-spacing: 0.02em;
 }
 .container {
@@ -40,7 +40,6 @@ body {
   margin-bottom: 20px;
   font-weight: 600;
   font-size: 11px;
-  line-height: calc(15 / 11);
   letter-spacing: 0.1em;
   text-transform: uppercase;
 }
@@ -67,9 +66,7 @@ body {
 .subtitle {
   margin-bottom: 20px;
   font-weight: 400;
-  font-size: 18px;
   line-height: calc(30 / 18);
-  letter-spacing: 0.02em;
 }
 .btn {
   padding: 12px 20px;
@@ -193,8 +190,6 @@ p {
   display: block;
   font-weight: 600;
   font-size: 11px;
-  line-height: calc(15 / 11);
-  letter-spacing: 0.2em;
 }
 .media-link:hover,
 .media-link:focus {
@@ -203,7 +198,6 @@ p {
 .hero .suptitle {
   font-weight: 600;
   font-size: 11px;
-  line-height: calc (15 / 11);
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--grey-text-color-60);
@@ -230,7 +224,6 @@ p {
   font-family: inherit;
   font-weight: 600;
   font-size: 11px;
-  line-height: calc(15 / 11);
   letter-spacing: 0.1em;
   color: var(--grey-text-color-60);
   background-color: transparent;
@@ -262,7 +255,6 @@ p {
   font-weight: 400;
   font-size: 14px;
   line-height: calc(26 / 14);
-  letter-spacing: 0.02em;
   color: var(--dark-text-color);
 }
 
@@ -314,7 +306,6 @@ p {
   gap: 12px;
   margin-bottom: 20px;
   line-height: calc(30 / 18);
-  letter-spacing: 0.02em;
   color: var(--grey-text-color);
 }
 .price-item::before {
@@ -375,7 +366,6 @@ p {
   width: 122px;
   font-weight: 600;
   font-size: 11px;
-  line-height: calc(15 / 11);
   text-align: center;
 }
 .benefits .caption {
@@ -403,14 +393,12 @@ p {
   margin-bottom: 8px;
   line-height: calc(25 / 18);
   text-align: center;
-  letter-spacing: 0.02em;
 }
 .team-position {
   margin-bottom: 30px;
   font-size: 14px;
   line-height: calc(19 / 14);
   text-align: center;
-  letter-spacing: 0.02em;
   color: var(--accent-color);
 }
 .social-icons-list {
@@ -489,7 +477,6 @@ p {
 .schedule {
   display: block;
   line-height: calc(30 / 18);
-  letter-spacing: 0.02em;
   color: var(--grey-text-color);
 }
 .address-link:hover,
@@ -524,8 +511,7 @@ p {
   margin-right: auto;
   font-weight: 600;
   font-size: 11px;
-  line-height: calc(15 / 11);
-  letter-spacing: 0.2em;
+
   color: var(--grey-text-color);
 }
 .footer .media-list {
