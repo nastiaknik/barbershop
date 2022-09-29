@@ -46,12 +46,13 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!-- styles -->
     <link href="./css/styles.css" rel="stylesheet" />
     <title>BarberShop</title>
   </head>
   <body>
-    <header class="header">
+    <header class="header no-transparency" data-heade>
       <div class="container flex-cont">
         <a class="logo" href="./index.html">
           <svg class="logo-icon" width="68" height="56">
@@ -95,7 +96,7 @@
                   href="#"
                   target="_blank"
                   rel="noopener noreferrer"
-                  >Youtube</a
+                  >Instagram</a
                 >
               </li>
               <li>
@@ -104,7 +105,7 @@
                   href="#"
                   target="_blank"
                   rel="noopener noreferrer"
-                  >Instagram</a
+                  >Youtube</a
                 >
               </li>
             </ul>
@@ -456,7 +457,7 @@
           <p class="suptitle">In Latin, "barba" means "beard"</p>
           <h2 hidden>Gallery</h2>
           <ul class="list gallery-list">
-            <li>
+            <li data-aos="fade-right" data-aos-duration="1000">
               <img
                 src="./images/gallery-img-1.jpg"
                 alt="Barber is cutting customer's hair"
@@ -464,7 +465,7 @@
                 height="360"
               />
             </li>
-            <li>
+            <li data-aos="fade-right" data-aos-duration="1000" data-aos-delay="500">
               <img
                 src="./images/gallery-img-2.jpg"
                 alt="Barber putting mousse on customer's beard with a shaving brush"
@@ -472,7 +473,7 @@
                 height="360"
               />
             </li>
-            <li>
+            <li data-aos="fade-right" data-aos-duration="1000" data-aos-delay="1000">
               <img
                 src="./images/gallery-img-3.jpg"
                 alt="Barber put towel on the customer's face"
@@ -480,7 +481,7 @@
                 height="360"
               />
             </li>
-            <li>
+            <li data-aos="fade-right" data-aos-duration="1000" data-aos-delay="1500">
               <img
                 src="./images/gallery-img-4.jpg"
                 alt="Barber finishes cutting"
@@ -574,7 +575,7 @@
         </ul>
       </div>
     </footer>
-    <div class="backdrop" data-modal>
+    <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <button class="modal-btn" type="button" data-modal-close>
           <svg width="16" height="16">
@@ -584,5 +585,9 @@
       </div>
     </div>
     <script src="../js/modal.js"></script>
+    <script src="./js/header-scroll.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script src="./js/aos-animate.js">
+  </script>
   </body>
 </html>
