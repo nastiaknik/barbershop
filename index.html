@@ -46,7 +46,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <!-- styles -->
     <link href="./css/styles.css" rel="stylesheet" />
     <title>BarberShop</title>
@@ -169,7 +169,7 @@
               always "on the same wave" with clients. Therefore, we are always
               ready to improve everyone who comes to us!
             </p>
-            <button class="btn" type="button">Online-booking</button>
+            <button class="btn" type="button" data-modal-open>Online-booking</button>
           </div>
         </div>
       </section>
@@ -219,7 +219,7 @@
               </li>
             </ul>
           </div>
-          <button class="btn" type="button">Online-booking</button>
+          <button class="btn" type="button" data-modal-open>Online-booking</button>
         </div>
       </section>
       <section class="benefits section">
@@ -465,7 +465,11 @@
                 height="360"
               />
             </li>
-            <li data-aos="fade-right" data-aos-duration="1000" data-aos-delay="500">
+            <li
+              data-aos="fade-right"
+              data-aos-duration="1000"
+              data-aos-delay="500"
+            >
               <img
                 src="./images/gallery-img-2.jpg"
                 alt="Barber putting mousse on customer's beard with a shaving brush"
@@ -473,7 +477,11 @@
                 height="360"
               />
             </li>
-            <li data-aos="fade-right" data-aos-duration="1000" data-aos-delay="1000">
+            <li
+              data-aos="fade-right"
+              data-aos-duration="1000"
+              data-aos-delay="1000"
+            >
               <img
                 src="./images/gallery-img-3.jpg"
                 alt="Barber put towel on the customer's face"
@@ -481,7 +489,11 @@
                 height="360"
               />
             </li>
-            <li data-aos="fade-right" data-aos-duration="1000" data-aos-delay="1500">
+            <li
+              data-aos="fade-right"
+              data-aos-duration="1000"
+              data-aos-delay="1500"
+            >
               <img
                 src="./images/gallery-img-4.jpg"
                 alt="Barber finishes cutting"
@@ -496,9 +508,22 @@
         <div class="container flex-cont section">
           <section class="flex-cont">
             <div class="side booking">
-              <h2 class="caption">Online-booking</h2>
-              <button class="btn" type="button">Send</button>
-            </div>
+
+              <form name="booking-form" method="post">
+                <strong class="caption">Online-booking</strong>
+                <label class="booking-form-field">
+                  <input class="booking-form-input" name="name" type="user-name" required placeholder=" ">
+                  <span class="booking-form-label">Name*</span>
+                </label>
+                  <label class="booking-form-field">
+                    <input class="booking-form-input" name="phone" type="tel" required placeholder=" ">
+                <span class="booking-form-label">Phone*</span>           
+                </label>
+                <label class="booking-form-message-field">
+                <textarea class="booking-form-message booking-form-input" name="message" placeholder="Enter your message here" rows="5"></textarea>
+              <span class="booking-form-heading">Message</span></label>
+                <button class="btn booking-btn" type="submit">Send</button>
+              </form></div>
           </section>
           <section id="contacts" class="contacts side">
             <h2 class="caption">Contacts</h2>
@@ -579,15 +604,130 @@
       <div class="modal">
         <button class="modal-btn" type="button" data-modal-close>
           <svg width="16" height="16">
-            <use href="./images/sprite.svg#icon-close""></use>
+            <use href="./images/sprite.svg#icon-close"></use>
           </svg>
         </button>
+        <!-- form-starts -->
+        <form class="register-form" name="register-form">
+          <strong class="register-form-title"
+            >Leave us your contact details, </br> we will call you back</strong
+          >
+          <div class="register-form-group" role="group">
+            <label class="register-form-field">
+              <input
+                class="register-form-input"
+                type="text"
+                name="user-name"
+                required
+                minlength="3"
+                placeholder=" "
+              />
+              <span class="register-form-label">Name</span>
+              <svg class="register-form-icon" width="22" height="22">
+                <use href="./images/sprite.svg#profile"></use>
+              </svg>
+              <svg class="register-form-notification" width="22" height="22">
+                <use
+                  class="warning"
+                  href="./images/sprite.svg#icon-warning"
+                ></use>
+                <use
+                  class="success"
+                  href="./images/sprite.svg#icon-success"
+                ></use>
+              </svg>
+            </label>
+            <label class="register-form-field">
+              <input
+                class="register-form-input"
+                type="text"
+                name="user-phone"
+                required
+                minlength="10"
+                maxlength="13"
+                placeholder="+38 099 999 99 99"
+              />
+              <span class="register-form-label">Phone</span>
+              <svg class="register-form-icon" width="22" height="22">
+                <use href="./images/sprite.svg#cell-phone"></use>
+              </svg>
+              <svg class="register-form-notification" width="22" height="22">
+                <use
+                  class="warning"
+                  href="./images/sprite.svg#icon-warning"
+                ></use>
+                <use
+                  class="success"
+                  href="./images/sprite.svg#icon-success"
+                ></use>
+              </svg>
+            </label>
+
+            <label class="register-form-field">
+              <input
+                class="register-form-input"
+                type="email"
+                name="user-mail"
+                required
+                placeholder="example@mail.com"
+              />
+              <span class="register-form-label">E-mail</span>
+              <svg class="register-form-icon" width="22" height="22">
+                <use href="./images/sprite.svg#envelope"></use>
+              </svg>
+              <svg class="register-form-notification" width="22" height="22">
+                <use
+                  class="warning"
+                  href="./images/sprite.svg#icon-warning"
+                ></use>
+                <use
+                  class="success"
+                  href="./images/sprite.svg#icon-success"
+                ></use>
+              </svg>
+            </label>
+
+            <label class="register-form-field">
+              <span class="register-form-heading">Message</span>
+              <textarea
+                class="register-form-message"
+                name="user-message"
+                rows="5"
+                placeholder="Enter the text"
+              ></textarea>
+            </label>
+          </div>
+          <label class="register-form-agreement">
+            <input
+              class="register-form-checkbox visually-hidden"
+              type="checkbox"
+              name="user-agreement"
+            />
+            <svg class="register-form-icons" width="20" height="20">
+              <use
+                class="icon-checked"
+                href="./images/sprite.svg#checked"
+              ></use>
+              <use
+                class="icon-unchecked"
+                href="./images/sprite.svg#unchecked"
+              ></use>
+            </svg>
+            <span class="register-form-descr">
+              I agree with the mailing and accept
+              <a class="register-form-link" href="" target="_blank"
+                >the Terms of the Agreement</a
+              >
+            </span>
+          </label>
+          <button class="register-form-btn btn" type="submit">Submit</button>
+        </form>
+        <!-- form-ends -->
       </div>
     </div>
     <script src="../js/modal.js"></script>
     <script src="./js/header-scroll.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-  <script src="./js/aos-animate.js">
-  </script>
+    <script src="./js/aos-animate.js"></script>
   </body>
 </html>
