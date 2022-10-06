@@ -901,10 +901,14 @@ p {
   outline: transparent;
 }
 /* Встановлення стану фокусу сусідньому елементу іконці */
-.register-form__checkbox:focus:focus-visible + .register-form__icons {
+/* .register-form__checkbox:focus:focus-visible + .register-form__icons {
   outline: 2px solid rgb(56, 87, 107);
   outline-offset: 1px;
   border-radius: 2px;
+} */
+.register-form__checkbox:focus + .register-form__icons {
+  border: 2px solid rgb(94, 158, 214);
+  border-radius: 4px;
 }
 .register-form__descr,
 .register-form__link {
