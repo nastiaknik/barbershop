@@ -558,10 +558,10 @@ p {
   background-color: transparent;
   border: none;
   border-bottom: 1px solid var(--grey-text-color-40);
-  outline: transparent;
-  transition: border-bottom var(--animation);
   color: var(--light-text-color);
+  outline: transparent;
   font-size: 14px;
+  transition: border-bottom var(--animation);
   /* padding: ; */
 }
 .booking-form__input:focus,
@@ -604,8 +604,8 @@ p {
   text-transform: uppercase;
   line-height: calc(15 / 11);
 }
-.booking-form__message:focus + .booking-form__heading {
-  color: var(--light-text-color);
+.booking-form__message-field:focus + .booking-form__heading {
+  color: var(--accent-color);
 }
 .booking-form__message {
   width: 100%;
